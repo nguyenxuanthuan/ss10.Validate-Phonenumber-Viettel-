@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+</head>
+<body>
+<form>
+  <input type="text" name="phonenumber" id="number"/>
+  <button type="button" onclick="check()">
+    Check
+  </button>
+</form>
+
+</body>
+<script>
+  function check() {
+    var  regexp = /^(84-|[+]84-)?[0](3[2-9]|8[6]|9[6-8])[0-9]{7}$/;
+    var text = document.getElementById('number').value;
+
+    if(regexp.test(text)){
+      alert("OK");
+    }else{
+      alert('KO OK');
+    }
+  }
+</script>
+</html>
